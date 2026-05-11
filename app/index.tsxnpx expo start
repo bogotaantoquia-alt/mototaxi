@@ -1,0 +1,58 @@
+yimport { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { useRouter } from 'expo-router';
+
+export default function Index() {
+  const router = useRouter();
+  return (
+    <View style={styles.container}>
+      <Image source={{ uri: 'https://i.ibb.co/39zZ84Xk/1000065738.jpg' }} style={styles.logo} resizeMode="contain" />
+      <TouchableOpacity style={styles.botonLogin} onPress={() => router.push('/login')}>
+        <Text style={styles.botonTexto}>🔑 Iniciar Sesión</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.botonPasajero} onPress={() => router.push('/pasajero')}>
+        <Text style={styles.botonTexto}>👤 Registrarme como Pasajero</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.botonConductor} onPress={() => router.push('/conductor')}>
+        <Text style={styles.botonTexto}>🏍️ Registrarme como Conductor</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#000', alignItems: 'center', justifyContent: 'center', padding: 20 },
+  logo: { width: 220, height: 220, marginBottom: 30 },
+  botonLogin: { backgroundColor: '#FFD700', padding: 15, borderRadius: 10, width: '80%', alignItems: 'center', marginBottom: 15 },
+  botonPasajero: { backgroundColor: '#fff', padding: 15, borderRadius: 10, width: '80%', alignItems: 'center', marginBottom: 15 },
+  botonConductor: { backgroundColor: '#1a1a1a', padding: 15, borderRadius: 10, width: '80%', alignItems: 'center', borderWidth: 1, borderColor: '#FFD700' },
+  botonTexto: { fontSize: 16, fontWeight: 'bold', color: '#
+cat > app/index.tsx << 'EOF'
+import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { useRouter } from 'expo-router';
+
+export default function Index() {
+  const router = useRouter();
+  return (
+    <View style={styles.container}>
+      <Image source={{ uri: 'https://i.ibb.co/39zZ84Xk/1000065738.jpg' }} style={styles.logo} resizeMode="contain" />
+      <TouchableOpacity style={styles.botonLogin} onPress={() => router.push('/login')}>
+        <Text style={styles.botonTexto}>🔑 Iniciar Sesión</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.botonPasajero} onPress={() => router.push('/pasajero')}>
+        <Text style={styles.botonTexto}>👤 Registrarme como Pasajero</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.botonConductor} onPress={() => router.push('/conductor')}>
+        <Text style={styles.botonTexto}>🏍️ Registrarme como Conductor</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#000', alignItems: 'center', justifyContent: 'center', padding: 20 },
+  logo: { width: 220, height: 220, marginBottom: 30 },
+  botonLogin: { backgroundColor: '#FFD700', padding: 15, borderRadius: 10, width: '80%', alignItems: 'center', marginBottom: 15 },
+  botonPasajero: { backgroundColor: '#fff', padding: 15, borderRadius: 10, width: '80%', alignItems: 'center', marginBottom: 15 },
+  botonConductor: { backgroundColor: '#1a1a1a', padding: 15, borderRadius: 10, width: '80%', alignItems: 'center', borderWidth: 1, borderColor: '#FFD700' },
+  botonTexto: { fontSize: 16, fontWeight: 'bold', color: '#000' },
+});
